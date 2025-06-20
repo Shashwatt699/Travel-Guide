@@ -112,11 +112,20 @@ nav button:hover{background:#005ecc;}
     flex: 1 1 auto;                /* grab all remaining width          */
     display: flex;                 /* center its text nice and tidy     */
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: first baseline;
     align-items: center;
-    padding: 2rem;                 /* (optional) inner spacing          */
+    padding: 5rem;                 /* (optional) inner spacing          */
     color: White;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    gap: 12rem;
+}
+
+.MainContent h1{
+    font: bold;
+    color: black;
+    width: 15rem;
+    height: 12rem;
+    font-size: xx-large;
 }
 
 .MainContent button{
@@ -125,4 +134,46 @@ nav button:hover{background:#005ecc;}
     width: 150px;
     cursor: pointer;
     height: 3rem;
+}
+
+.MainMini{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.MainMini h1{
+    color:white;
+}
+
+.MainContenttt {
+    flex: auto;                /* grab all remaining width          */
+    display: flex;                 /* center its text nice and tidy     */
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5rem;                 /* (optional) inner spacing          */
+    color: White;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    gap: 12rem;
+}
+
+.lefty{
+    font-size: 3.5rem ;
+}
+
+.righty, .righty label{
+    font-size: 3rem;
+}
+
+form{
+    display : flex;
+    flex-direction: column;
+}
+
+form.textarea, form.input{
+    width:5rem;
+    height: 8rem;
 }
