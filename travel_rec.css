@@ -1,3 +1,128 @@
-.nav{
-    flex: col;
+/* ---- RESET & BASICS ---- */
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav{
+  background:#FBEAEB;               /* whatever bg you like */
+  /* give the nav some breathing room */
+  padding:0.5rem 1rem;
+}
+
+/* ---- FLEX LAYOUT ---- */
+nav ul{
+  list-style: none;
+  display:flex;                  /* horizontal layout */
+  align-items:center;            /* vertical centering */
+  gap:1.25rem;                   /* space between every <li> */
+  background: #FBEAEB;
+}
+
+/* 1️⃣  LEFT‑HAND LOGO  (stays at flex‑start automatically) */
+nav ul li:first-child img{
+  display:block;                 /* remove inline‑img gap */
+}
+
+/* 2️⃣  PUSH THE “DESTINATION + BUTTONS” GROUP ALL THE WAY RIGHT */
+nav ul li:nth-child(5){          /* the <li> that holds the <input> */
+    margin-left:auto;              /* creates flexible spacer */
+  }
+
+/* 2a.  Make the three items on the right sit snugly together */
+nav ul li:nth-child(5),
+nav ul li:nth-child(6),
+nav ul li:nth-child(7){
+  display:flex;
+  align-items:center;
+  gap:0.5rem;                    /* tighten gap just for this cluster */
+}
+
+/* 3️⃣  MID‑NAV LINKS — style as you like */
+nav a{
+  text-decoration:none;
+  background: #FBEAEB ;
+  color: black;
+  font-weight:600;
+  letter-spacing:0.5px;
+  transition:color .2s;
+}
+nav a:hover{color:#0077ff;}
+
+/* 4️⃣  SEARCH FIELD & BUTTONS */
+nav input[type="text"]{
+  padding:0.4rem 0.75rem;
+  border:3px solid black;
+  border-radius: 10px;
+  color: white;
+  background: black;
+}
+nav button{
+  padding:0.45rem 0.9rem;
+  border: ridge black;
+  border-radius:10px;
+  background: #FBEAEB;
+  color: black;
+  cursor:pointer;
+  transition:background .2s;
+}
+nav button:hover{background:#005ecc;}
+
+#home{
+    background-image: url("BG.jpg") ;
+    background-size: cover;       /* Cover entire section */
+    background-position: center;  /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+  
+    height: 100vh;                /* Make it full screen height */
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Horizontal alignment*/
+    align-items: stretch;
+    color: black;                 /* Text color if needed */
+    text-align: center;
+    gap: 1rem;
+}
+
+.social_Logos{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background: transparent;
+    color: White;
+    padding: px;
+}
+
+.social_Logos img {
+    width: 8rem;
+    height: 5rem;
+    cursor:pointer;
+    background : transparent;
+}
+
+.social_Logos img{
+    background: blue;
+}
+
+.MainContent {
+    flex: 1 1 auto;                /* grab all remaining width          */
+    display: flex;                 /* center its text nice and tidy     */
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem;                 /* (optional) inner spacing          */
+    color: White;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.MainContent button{
+    background: Black;
+    color: WHite;
+    width: 150px;
+    cursor: pointer;
+    height: 3rem;
 }
