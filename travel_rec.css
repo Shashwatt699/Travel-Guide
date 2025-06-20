@@ -75,7 +75,8 @@ nav button:hover{background:#005ecc;}
     background-size: cover;       /* Cover entire section */
     background-position: center;  /* Center the image */
     background-repeat: no-repeat; /* Prevent tiling */
-  
+    object-fit: fill;
+
     height: 100vh;                /* Make it full screen height */
     width: 100%;
     display: flex;
@@ -109,15 +110,32 @@ nav button:hover{background:#005ecc;}
 }
 
 .MainContent {
-    flex: 1 1 auto;                /* grab all remaining width          */
+    display: flex;           /* Enables flex layout */
+    flex-direction: row;     /* Places MainLeft and MainRight side by side */
+    gap: 2rem;               /* Optional: spacing between left and right */
+    padding: 2rem;
+    align-items: flex-start; /* Aligns top edges */
+  }
+
+.MainLeft {
+    flex: 2;                /* grab all remaining width          */
     display: flex;                 /* center its text nice and tidy     */
     flex-direction: column;
     justify-content: first baseline;
     align-items: center;
-    padding: 5rem;                 /* (optional) inner spacing          */
+    padding: 1rem;                 /* (optional) inner spacing          */
     color: White;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     gap: 12rem;
+}
+
+.MainRight{
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center ;
+    color: black;
 }
 
 .MainContent h1{
@@ -177,3 +195,4 @@ form.textarea, form.input{
     width:5rem;
     height: 8rem;
 }
+
